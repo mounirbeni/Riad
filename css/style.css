@@ -110,16 +110,23 @@ body {
     color: white;
     text-align: center;
     padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-image {
     margin-bottom: 2rem;
+    position: relative;
 }
 
 .profile-img {
@@ -129,6 +136,8 @@ body {
     object-fit: cover;
     border: 5px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transform: translateZ(0);
 }
 
 .hero-title {
@@ -136,6 +145,8 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transform: translateZ(0);
 }
 
 .hero-subtitle {
@@ -143,6 +154,7 @@ body {
     font-weight: 400;
     margin-bottom: 2rem;
     opacity: 0.9;
+    position: relative;
 }
 
 .hero-description {
@@ -151,6 +163,7 @@ body {
     margin: 0 auto 3rem;
     opacity: 0.9;
     line-height: 1.8;
+    position: relative;
 }
 
 .hero-buttons {
@@ -159,6 +172,7 @@ body {
     justify-content: center;
     margin-bottom: 3rem;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .btn {
@@ -173,6 +187,7 @@ body {
     transition: all 0.3s ease;
     cursor: pointer;
     font-size: 1rem;
+    position: relative;
 }
 
 .btn-primary {
@@ -202,6 +217,8 @@ body {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    position: relative;
+    transform: translateZ(0);
 }
 
 .social-link {
@@ -216,6 +233,7 @@ body {
     text-decoration: none;
     transition: all 0.3s ease;
     font-size: 1.2rem;
+    position: relative;
 }
 
 .social-link:hover {
@@ -234,6 +252,7 @@ body {
 .social-link.linkedin:hover {
     background: #0077b5;
 }
+
 
 /* ===== SECTION STYLES ===== */
 section {
