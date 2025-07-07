@@ -275,6 +275,27 @@ section {
 /* ===== ABOUT SECTION ===== */
 .about {
     background: #f8f9fa;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.about-text {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform;
 }
 
 .about-text p {
@@ -282,6 +303,8 @@ section {
     margin-bottom: 1.5rem;
     color: #555;
     line-height: 1.8;
+    text-align: justify;
+    position: relative;
 }
 
 .location-info {
@@ -291,6 +314,7 @@ section {
     margin: 2rem 0;
     font-weight: 600;
     color: #3498db;
+    position: relative;
 }
 
 .personal-quote {
@@ -303,7 +327,10 @@ section {
     color: #555;
     margin-top: 2rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transform: translateZ(0);
 }
+
 
 /* ===== INFO CARDS SECTION ===== */
 .info-cards {
