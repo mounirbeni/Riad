@@ -112,8 +112,6 @@ body {
     padding-top: 80px;
     position: relative;
     overflow: hidden;
-    transform: translateZ(0);
-    backface-visibility: hidden;
 }
 
 .hero-container {
