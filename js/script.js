@@ -106,6 +106,17 @@ function initSmoothScrolling() {
 }
 
 // ===== SCROLL EFFECTS =====
+
+function initScrollEffects() {
+    // Parallax effect for hero section
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+    });
+
     // Fade in elements on scroll
     const observerOptions = {
         threshold: 0.1,
