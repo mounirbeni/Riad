@@ -19,6 +19,7 @@ body {
    overflow-x: hidden;
 ‎    width: 100%;
 ‎    max-width: 100vw;
+min-width: 320px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -325,9 +326,13 @@ padding: 4rem 0;
 }
 
 .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     gap: 2rem;
+    padding: 2rem 0;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
 }
 
 .info-card {
@@ -337,6 +342,9 @@ padding: 4rem 0;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease; /* Smooth transition */
+flex: 0 0 80%;
+scroll-snap-align: center;
+min-width: 250px;
 }
 
 .info-card:hover {
@@ -1434,7 +1442,7 @@ padding: 4rem 0;
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     .hero-title {
