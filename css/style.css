@@ -329,15 +329,16 @@ padding: 4rem 0;
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 2rem 0;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .info-card {
     background: white;
-    padding: 2.5rem;
+    padding: 1.5rem;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
