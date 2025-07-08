@@ -109,9 +109,9 @@ function initSmoothScrolling() {
 // ===== SCROLL EFFECTS =====
 function initScrollEffects() {
     // Parallax effect for hero section - Removed for performance/accessibility, can be re-added with requestAnimationFrame if needed
-    // window.addEventListener('scroll', function() {
+    // window.addEventListener("scroll", function() {
     //     const scrolled = window.pageYOffset;
-    //     const hero = document.querySelector('.hero');
+    //     const hero = document.querySelector(".hero");
     //     if (hero) {
     //         hero.style.transform = `translateY(${scrolled * 0.5}px)`;
     //     }
@@ -423,12 +423,20 @@ function removeNotification(notification) {
 
 // ===== AOS INITIALIZATION =====
 function initAOS() {
+    // Check if AOS is defined before initializing
     if (typeof AOS !== "undefined") {
         AOS.init({
             duration: 800,
             easing: "ease-in-out",
             once: true,
             offset: 100
+        });
+    } else {
+        console.warn("AOS library not found. Please ensure aos.js is loaded before this script.");
+        // Fallback for elements that might be hidden by AOS if it's not loaded
+        document.querySelectorAll("[data-aos]").forEach(el => {
+            el.style.opacity = "1";
+            el.style.transform = "none";
         });
     }
 }
@@ -467,9 +475,6 @@ function animateCounter(element, start, end, suffix, duration) {
         element.textContent = Math.floor(current) + suffix;
     }, 16);
 }
-
-// Initialize counters when DOM is loaded
-// Removed redundant DOMContentLoaded listener and setTimeout
 
 // ===== SOCIAL MEDIA LINKS =====
 document.addEventListener("DOMContentLoaded", function() {
@@ -576,7 +581,7 @@ window.addEventListener("error", function(e) {
 // Removed debounce and throttle as they are not strictly necessary for the current animations
 
 // Apply throttling to scroll events for better performance
-// window.addEventListener('scroll', throttle(function() {
+// window.addEventListener("scroll", throttle(function() {
 //     // Scroll-based animations and effects are handled here
 // }, 16)); // ~60fps
 
