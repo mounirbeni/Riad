@@ -360,10 +360,14 @@ section {
     padding: 4rem 0;
 }
 
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.cards-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     gap: 2rem;
+    padding: 2rem 0;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
 }
 
 .info-card {
@@ -373,6 +377,9 @@ section {
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+flex: 0 0 80%;
+scroll-snap-align: center;
+min-width: 250px;
 }
 
 .info-card:hover {
