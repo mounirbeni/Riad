@@ -572,12 +572,6 @@ section {
     color: white;
 }
 
-.achievements-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-}
-
 .achievement-card {
     text-align: center;
     padding: 2rem;
@@ -614,6 +608,44 @@ section {
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.8;
+}
+
+.achievements-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding: 2rem 0;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+.achievement-card {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+@media (min-width: 768px) {
+    .achievement-card {
+        flex: 0 0 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .achievement-card {
+        flex: 0 0 30%;
+    }
 }
 
 /* ===== SKILLS SECTION ===== */
