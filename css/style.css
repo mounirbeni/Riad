@@ -371,16 +371,19 @@ section {
 }
 
 .info-card {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-flex: 0 0 80%;
-scroll-snap-align: center;
-min-width: 250px;
+  flex: 0 0 300px;
+  max-width: 300px;
+  min-width: 250px;
+  margin: 0 auto;
+  scroll-snap-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
+
 
 .info-card:hover {
     transform: translateY(-10px);
@@ -580,12 +583,17 @@ min-width: 250px;
 }
 
 .achievement-card {
-    text-align: center;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease;
+  flex: 0 0 300px;
+  max-width: 300px;
+  min-width: 250px;
+  margin: 0 auto;
+  scroll-snap-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 2rem;
+  transition: transform 0.3s ease;
 }
 
 .achievement-card:hover {
