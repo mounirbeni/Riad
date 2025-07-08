@@ -279,6 +279,9 @@ section {
 /* ===== ABOUT SECTION ===== */
 .about {
     background: #fdf6ec; /* Warm beige */
+padding: 4rem 0;
+‎    position: relative;
+‎    overflow: hidden;
 }
 
 .about-text p {
